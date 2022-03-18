@@ -1,9 +1,7 @@
 {
   "name": "FuckTheAct2Intro",
   "description": "*delete your intro*",
-  "version_number": "1.0.0",
+  "version_number": "1.0.1",
   "website_url": "https://github.com/xhayper/FuckTheAct2Intro",
-  "dependencies": [
-    "BepInEx-BepInExPack_Inscryption-5.4.1701"
-  ]
+  "dependencies": []
 }
