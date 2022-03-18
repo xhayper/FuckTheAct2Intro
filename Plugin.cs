@@ -1,22 +1,17 @@
-using BepInEx;
+using System.Reflection;
 using HarmonyLib;
-
-#pragma warning disable 169
+using BepInEx;
 
 namespace FuckTheAct2Intro
 {
 
-    [BepInPlugin(PluginGuid, PluginName, PluginVersion)]
+    [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
     public class Plugin : BaseUnityPlugin
     {
-        private const string PluginGuid = "io.github.xhayper.fucktheact2intro";
-        private const string PluginName = "FuckTheAct2Intro";
-        private const string PluginVersion = "1.0.0.0";
 
         private void Awake()
         {
-            Harmony harmony = new Harmony(PluginGuid);
-            harmony.PatchAll();
+            Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), PluginInfo.PLUGIN_GUID);
         }
     }
 }
